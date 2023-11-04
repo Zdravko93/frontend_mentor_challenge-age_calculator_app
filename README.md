@@ -40,7 +40,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: (https://github.com/Zdravko93/frontend_mentor_challenge-age_calculator_app.git)
-- Live Site URL: (https://your-live-site-url.com)
+- Live Site URL: (https://zdravko93.github.io/frontend_mentor_challenge-age_calculator_app/)
 
 ## My process
 
