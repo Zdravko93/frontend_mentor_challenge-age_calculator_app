@@ -1,0 +1,252 @@
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+span {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--off-white);
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card {
+  margin-top: 5rem;
+  padding: 3rem 2rem 0rem;
+  max-width: 400px;
+  background: var(--white);
+  border-radius: 20px;
+  border-bottom-right-radius: 120px;
+}
+
+.inputs {
+  padding-bottom: 4rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--light-grey);
+  position: relative;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  color: var(--smokey-grey);
+}
+
+.input-group label.error {
+  color: var(--light-red);
+}
+
+.input-group input {
+  font-family: "Poppins", sans-serif;
+  padding: 1rem;
+  width: 110px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  border: 1px solid var(--light-grey);
+  border-radius: 5px;
+  outline: none;
+}
+
+input:hover,
+input:focus {
+  border: 1px solid var(--purple);
+}
+
+.input-group input.error {
+  border: 1px solid var(--light-red);
+}
+
+.input-group input.error-border {
+  border: 1px solid var(--light-red);
+}
+
+small {
+  height: 30px;
+  font-size: 0.7rem;
+  color: var(--light-red);
+}
+
+.submit-button {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translateX(-50%);
+  background: var(--purple);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid var(--purple);
+  cursor: pointer;
+  transition: all 300ms ease;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-button:hover {
+  background: var(--off-black);
+}
+
+.submit-button img {
+  width: 30px;
+}
+
+.outputs {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.outputs h1 {
+  font-size: 3.5rem;
+}
+
+.outputs span {
+  font-size: 3.8rem;
+  color: var(--purple);
+  opacity: 0;
+}
+
+footer {
+  background: white;
+  font-size: 0.8rem;
+  color: var(--purple);
+}
+
+footer a {
+  padding: 0.2em;
+  color: var(--light-red);
+}
+
+/* MODAL AND BACKDROP */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  display: none;
+}
+
+.error-modal {
+  font-family: "Montserrat", sans-serif;
+  padding: 1rem;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+  background: white;
+  color: red;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+}
+
+.error-modal-button {
+  padding: 0.5rem 2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.8rem;
+  background: var(--purple);
+  color: var(--off-white);
+  opacity: 0.9;
+  transition: all 100ms ease;
+}
+
+.error-modal-button:hover {
+  opacity: 1;
+}
+
+/* OUTPUT NUMBERS ANIMATION */
+.output-number-animate {
+  animation: number-fade-in 2000ms ease forwards;
+}
+
+@keyframes number-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*-----------------*/
+/* MEDIA QUERY */
+@media (min-width: 768px) {
+  .card {
+    padding-right: 4rem;
+    min-width: 600px;
+  }
+  .inputs {
+    padding-right: 5rem;
+    gap: 0rem;
+  }
+  .inputs input {
+    width: 80%;
+  }
+  .submit-button {
+    left: 100%;
+    width: 70px;
+    height: 70px;
+  }
+  .outputs h1 {
+    font-size: 6rem;
+  }
+  .outputs span {
+    font-size: 5rem;
+  }
+  .error-modal {
+    font-size: 0.9rem;
+  }
+  .error-modal-button {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
