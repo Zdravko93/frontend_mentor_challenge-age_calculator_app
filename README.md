@@ -1,11 +1,9 @@
-# Frontend Mentor - Age calculator app solution
+# Frontend Mentor - Age Calculator App Solution
 
-This is a solution to the [Age calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Age Calculator App challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q). Frontend Mentor challenges help you improve your coding skills by building realistic projects and implementing real-world features.
 
 ## Table of contents
 
-- [Frontend Mentor - Age calculator app solution](#frontend-mentor---age-calculator-app-solution)
-  - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [The challenge](#the-challenge)
     - [Screenshot](#screenshot)
@@ -39,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://github.com/Zdravko93/frontend_mentor_challenge-age_calculator_app.git)
-- Live Site URL: (https://zdravko93.github.io/frontend_mentor_challenge-age_calculator_app/)
+- Solution URL: [GitHub](https://github.com/Zdravko93/frontend_mentor_challenge-age_calculator_app.git)
+- Live Site URL: [Frontend Mentor](https://zdravko93.github.io/frontend_mentor_challenge-age_calculator_app/)
 
 ## My process
 
@@ -48,13 +46,14 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
+- Flexbox for layout
 - Mobile-first workflow
 
 
 ### What I learned
 
-- I learned how to refactor code better, with more maintainability  and readability, splitting code into modules
+- How to refactor code for better maintainability and readability
+- Splitting code into modules for cleaner structure
 
 ## Author
 - Frontend Mentor - [@Zdravko93](https://www.frontendmentor.io/profile/Zdravko93)
