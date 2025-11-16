@@ -123,7 +123,8 @@ small {
   justify-content: center;
 }
 
-.submit-button:hover {
+.submit-button:hover,
+.submit-button:focus-visible {
   background: var(--off-black);
 }
 
