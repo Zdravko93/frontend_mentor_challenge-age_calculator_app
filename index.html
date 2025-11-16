@@ -1,63 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="age-calculator-app.js" defer></script>
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="age-calculator-app.js" defer></script>
-  <title>Frontend Mentor | Age calculator app</title>
-</head>
+  <body>
+    <div class="backdrop"></div>
+    <div class="error-modal">
+      <p class="error-modal-message">
+        All inputs must be valid. Please check your inputs and try again.
+      </p>
+      <button class="error-modal-button">OK</button>
+    </div>
+    <main class="card">
+      <section class="inputs">
+        <div class="input-group">
+          <label for="day">DAY</label>
+          <input type="number" id="day" placeholder="DD" />
+          <small class="day-error"></small>
+        </div>
 
-<body>
-  <div class="backdrop"></div>
-  <div class="error-modal">
-    <p class="error-modal-message">All inputs must be valid. Please check your
-      inputs and try again.
-    </p>
-    <button class="error-modal-button">OK</button>
-  </div>
-  <main class="card">
-    <section class="inputs">
-      <div class="input-group">
-        <label for="day">DAY</label>
-        <input type="number" id="day" placeholder="DD">
-        <small class="day-error"></small>
+        <div class="input-group">
+          <label for="month">MONTH</label>
+          <input type="number" id="month" placeholder="MM" />
+          <small class="month-error"></small>
+        </div>
+
+        <div class="input-group">
+          <label for="year">YEAR</label>
+          <input type="number" id="year" placeholder="YYYY" />
+          <small class="year-error"></small>
+        </div>
+
+        <button class="submit-button">
+          <img src="assets/images/icon-arrow.svg" alt="Calculate age" />
+        </button>
+      </section>
+
+      <section class="outputs">
+        <h1><span>--</span>years</h1>
+        <h1><span>--</span>months</h1>
+        <h1><span>--</span>days</h1>
+      </section>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/Zdravko93?tab=repositories">Zdravko</a>.
       </div>
-
-      <div class="input-group">
-        <label for="month">MONTH</label>
-        <input type="number" id="month" placeholder="MM">
-        <small class="month-error"></small>
-      </div>
-
-      <div class="input-group">
-        <label for="year">YEAR</label>
-        <input type="number" id="year" placeholder="YYYY">
-        <small class="year-error"></small>
-      </div>
-
-      <button class="submit-button">
-        <img src="assets/images/icon-arrow.svg" alt="submit">
-      </button>
-    </section>
-
-    <section class="outputs">
-      <h1><span>--</span>years</h1>
-      <h1><span>--</span>months</h1>
-      <h1><span>--</span>days</h1>
-    </section>
-  </main>
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://github.com/Zdravko93?tab=repositories">Zdravko</a>.
-    </div> 
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
