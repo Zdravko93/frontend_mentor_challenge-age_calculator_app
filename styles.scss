@@ -99,7 +99,7 @@ input:focus {
 
 .input-group input.error {
   border: 1px solid var(--light-red);
-} 
+}
 
 .input-group input.error-border {
   border: 1px solid var(--light-red);
@@ -223,7 +223,6 @@ footer a {
   animation: number-fade-in 2000ms ease forwards;
 }
 
-
 @keyframes number-fade-in {
   // napraviti animaciju gde se broj lagano pojavljuje dok se istovremeno okrece i zavrsava na pocetnoj(trazenoj) poziciji
   0% {
@@ -233,7 +232,6 @@ footer a {
     opacity: 1;
   }
 }
-
 
 /*-----------------*/
 
@@ -273,5 +271,38 @@ footer a {
 
   .error-modal-button {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .card {
+    max-width: none;
+    padding: 2rem 1.5rem 0;
+  }
+
+  .input-group label {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+  }
+
+  .input-group input {
+    width: 80px;
+
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .inputs {
+    gap: 0.5rem;
+  }
+
+  .outputs h1 {
+    font-size: 2.5rem;
+  }
+
+  .submit-button {
+    width: 55px;
+    height: 55px;
+    top: 85%;
   }
 }
