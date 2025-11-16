@@ -11,6 +11,9 @@
 ###############################################
 *.xd
 
+# Avoid uploading map files (map files are for debugging purposes)
+*.map
+
 # Avoid your project being littered with annoying .DS_Store files!
 .DS_Store
 .prettierignore
