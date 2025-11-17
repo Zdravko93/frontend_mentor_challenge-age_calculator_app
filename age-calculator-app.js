@@ -19,6 +19,42 @@ const errorMessages = document.querySelectorAll("small");
 // Initialization
 window.onload = () => clearInputs();
 
+const openModal = (msg) => {
+  // Show modal visually
+  inputs.forEach((i) => i.classList.add("error-border"));
+  labels.forEach((l) => l.classList.add("error"));
+  errorMessages[0].textContent = msg;
+  errorMessages[1].textContent = "";
+  errorMessages[2].textContent = "";
+  errorModal.style.display = "flex";
+  backdrop.style.display = "block";
+
+  // Focus first element
+  errorModalButton.focus();
+
+  // Trap keyboard events
+  const handleKey = (e) => {
+    if (e.key === "Escape") {
+      clearInputs();
+    } else if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      errorModalButton.click();
+    } else if (e.key === "Tab") {
+      e.preventDefault();
+      errorModalButton.focus();
+    }
+  };
+
+  errorModal.addEventListener("keydown", handleKey);
+
+  // Cleanup listeners when modal closes
+  const cleanup = () => {
+    errorModal.removeEventListener("keydown", handleKey);
+  };
+  errorModalButton.addEventListener("click", cleanup, { once: true });
+  backdrop.addEventListener("click", cleanup, { once: true });
+};
+
 // Validation Helpers
 const validateInput = (input, label, min, max, errorElement, msg) => {
   const value = Number(input.value);
@@ -72,18 +108,6 @@ const getMaxDaysInMonth = (month, year) => {
   return [4, 6, 9, 11].includes(month) ? 30 : 31;
 };
 
-const showError = (msg) => {
-  inputs.forEach((i) => i.classList.add("error-border"));
-  labels.forEach((l) => l.classList.add("error"));
-
-  errorMessages[0].textContent = msg;
-  errorMessages[1].textContent = "";
-  errorMessages[2].textContent = "";
-
-  errorModal.style.display = "flex";
-  backdrop.style.display = "block";
-};
-
 const clearInputs = () => {
   inputs.forEach((input) => {
     input.value = "";
@@ -113,7 +137,7 @@ const calculateAge = () => {
     monthInput.value &&
     yearInput.value;
 
-  if (!valid) return showError("Must be a valid date");
+  if (!valid) return openModal("Must be a valid date");
 
   const day = Number(dayInput.value);
   const month = Number(monthInput.value);
@@ -121,7 +145,7 @@ const calculateAge = () => {
 
   // Validate day against real-world months
   if (day > getMaxDaysInMonth(month, year)) {
-    return showError("Invalid day for the selected month");
+    return openModal("Invalid day for the selected month");
   }
 
   // Calculate age
@@ -151,5 +175,6 @@ monthInput.addEventListener("input", validateMonth);
 yearInput.addEventListener("input", validateYear);
 
 submitButton.addEventListener("click", calculateAge);
+
 backdrop.addEventListener("click", clearInputs);
 errorModalButton.addEventListener("click", clearInputs);
