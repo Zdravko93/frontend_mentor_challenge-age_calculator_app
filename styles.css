@@ -145,7 +145,6 @@ small {
 .outputs span {
   font-size: 3.8rem;
   color: var(--purple);
-  opacity: 0;
 }
 
 footer {
