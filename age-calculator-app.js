@@ -20,39 +20,42 @@ const errorMessages = document.querySelectorAll("small");
 window.onload = () => clearInputs();
 
 const openModal = (msg) => {
-  // Show modal visually
-  inputs.forEach((i) => i.classList.add("error-border"));
-  labels.forEach((l) => l.classList.add("error"));
-  errorMessages[0].textContent = msg;
-  errorMessages[1].textContent = "";
-  errorMessages[2].textContent = "";
+  // Show modal content
   errorModal.style.display = "flex";
   backdrop.style.display = "block";
+  errorMessages[0].textContent = msg;
 
-  // Focus first element
+  // Hide background content from screen readers
+  document.querySelector("main").setAttribute("aria-hidden", "true");
+  document.querySelector("footer").setAttribute("aria-hidden", "true");
+
+  // Focus the OK button
   errorModalButton.focus();
 
-  // Trap keyboard events
   const handleKey = (e) => {
     if (e.key === "Escape") {
-      clearInputs();
+      closeModal();
     } else if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
       errorModalButton.click();
     } else if (e.key === "Tab") {
-      e.preventDefault();
+      e.preventDefault(); // keep focus on OK button
       errorModalButton.focus();
     }
   };
 
   errorModal.addEventListener("keydown", handleKey);
 
-  // Cleanup listeners when modal closes
-  const cleanup = () => {
+  const closeModal = () => {
+    errorModal.style.display = "none";
+    backdrop.style.display = "none";
+    document.querySelector("main").removeAttribute("aria-hidden");
+    document.querySelector("footer").removeAttribute("aria-hidden");
     errorModal.removeEventListener("keydown", handleKey);
   };
-  errorModalButton.addEventListener("click", cleanup, { once: true });
-  backdrop.addEventListener("click", cleanup, { once: true });
+
+  errorModalButton.addEventListener("click", closeModal, { once: true });
+  backdrop.addEventListener("click", closeModal, { once: true });
 };
 
 // Validation Helpers
