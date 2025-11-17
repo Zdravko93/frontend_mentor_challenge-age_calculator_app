@@ -22,8 +22,13 @@
 
   <body>
     <div class="backdrop"></div>
-    <div class="error-modal">
-      <p class="error-modal-message">
+    <div
+      class="error-modal"
+      role="alertdialog"
+      aria-modal="true"
+      aria-describedby="error-description"
+    >
+      <p id="error-description" class="error-modal-message">
         All inputs must be valid. Please check your inputs and try again.
       </p>
       <button class="error-modal-button">OK</button>
