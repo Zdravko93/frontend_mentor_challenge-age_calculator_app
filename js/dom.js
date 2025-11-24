@@ -1,4 +1,3 @@
-// dom.js
 export const dayInput = document.getElementById("day");
 export const monthInput = document.getElementById("month");
 export const yearInput = document.getElementById("year");

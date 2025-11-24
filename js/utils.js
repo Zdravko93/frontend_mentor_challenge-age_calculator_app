@@ -1,4 +1,3 @@
-// utils.js
 export const getMaxDaysInMonth = (month, year) => {
   if (month === 2) {
     const isLeapYear = (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;

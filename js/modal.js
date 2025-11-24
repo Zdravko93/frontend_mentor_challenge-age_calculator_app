@@ -1,4 +1,3 @@
-// modal.js
 export const openModal = (
   msg,
   errorModal,
