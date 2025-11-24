@@ -12,11 +12,14 @@ export const openModal = (
   const main = document.querySelector("main");
   const footer = document.querySelector("footer");
 
+  // Hide background content from screen readers
   main.setAttribute("aria-hidden", "true");
   footer.setAttribute("aria-hidden", "true");
 
+  // Focus the OK button for accessibility
   errorModalButton.focus();
 
+  // Handle key events inside modal
   const handleKey = (e) => {
     if (e.key === "Escape") closeModal();
     else if (e.key === "Enter" || e.key === " ") {
@@ -28,6 +31,7 @@ export const openModal = (
     }
   };
 
+  // Close modal and cleanup event listeners
   const closeModal = () => {
     errorModal.style.display = "none";
     backdrop.style.display = "none";

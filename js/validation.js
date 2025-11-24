@@ -1,3 +1,5 @@
+// Input Validation Functions
+
 export const validateInput = (input, label, min, max, errorElement, msg) => {
   const value = Number(input.value);
   const hasError = isNaN(value) || value < min || value > max;
