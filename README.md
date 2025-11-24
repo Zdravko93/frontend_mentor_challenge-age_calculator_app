@@ -4,15 +4,14 @@ This is a solution to the [Age Calculator App challenge on Frontend Mentor](http
 
 ## Table of contents
 
-  - [Overview](#overview)
-    - [The challenge](#the-challenge)
-    - [Screenshot](#screenshot)
-    - [Links](#links)
-  - [My process](#my-process)
-    - [Built with](#built-with)
-    - [What I learned](#what-i-learned)
-  - [Author](#author)
-
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
 
 ## Overview
 
@@ -33,7 +32,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](assets/Frontend%20Mentor-Age%20calculator%20app-screenshot.png)
+![](/assets/Frontend-Mentor-Age-calculator-app-screenshot.png)
 
 ### Links
 
@@ -49,12 +48,12 @@ Users should be able to:
 - Flexbox for layout
 - Mobile-first workflow
 
-
 ### What I learned
 
 - How to refactor code for better maintainability and readability
 - Splitting code into modules for cleaner structure
 
 ## Author
+
 - Frontend Mentor - [@Zdravko93](https://www.frontendmentor.io/profile/Zdravko93)
 - Github - [Zdravko93](https://github.com/Zdravko93)
