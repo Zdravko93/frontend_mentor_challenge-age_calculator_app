@@ -11,7 +11,7 @@ This is a solution to the [Age Calculator App challenge on Frontend Mentor](http
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-- [Accessibility][#accessibility]
+- [Accessibility](#accessibility)
 - [Author](#author)
 
 ## Overview
